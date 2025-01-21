@@ -18,6 +18,10 @@ class Solution {
 public:
     // 查找两个链表相交的节点
     ListNode *getIntersectionNode(ListNode *headA, ListNode *headB) {
+        if (headA == nullptr || headB == nullptr) 
+        {
+            return nullptr;
+        }
         struct ListNode *Atemp;
         struct ListNode *Btemp;
         Atemp = headA;
@@ -49,6 +53,7 @@ ListNode *CreateList(vector<int> v)
         current->next = new ListNode(v[i]);
         current = current->next;
     }
+    //返回 next是头节点，返回 dummyhead是哑头节点
     return dummyHead.next;
 }
 void PrintList(ListNode *Node) {
