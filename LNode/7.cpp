@@ -56,8 +56,9 @@ ListNode* removeNthFromEnd(ListNode* head, int n)
     {
         current = current->next;
     }
+    ListNode* temp = current->next;
     current->next = current->next->next;
-
+    delete temp;
     return dummyNode.next;
 }
 

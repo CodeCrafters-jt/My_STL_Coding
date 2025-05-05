@@ -1,5 +1,5 @@
 //148. 排序链表
-//归并排序  O(n^2)
+//归并排序  O(nlog(n))
 
 #include <iostream>
 #include <vector>
